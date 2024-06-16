@@ -1,6 +1,5 @@
 import { Routes, Route, Link } from "react-router-dom"
 
-
 import Hero from "./components/Hero"
 import Therapien from "./components/Therapien"
 import UnserTeam from "./components/UnserTeam"
@@ -10,18 +9,16 @@ import Footer from "./components/Footer"
 import NotFound from "./components/NotFound"
 import Terminvereinbarung from "./components/Terminvereinbarung"
 
-
-
 function App() {
 
   return (
     <>
-      <Hero id="home" />
       <Terminvereinbarung />
-      <Therapien id="therapie" />
-      <UnserTeam id="unser-team" />
-      <Karriere id="karriere" />
-      <News id="news" />
+      <Hero />
+      <Therapien />
+      <UnserTeam />
+      <Karriere />
+      <News />
       <Footer />
     </>
   )

@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom"
 import logo from "../images/logo.png"
+import ScrollLink from './ScrollLink'
+
 
 function Hero() {
     return (
@@ -12,11 +14,11 @@ function Hero() {
                         </Link>
                     </div>
                     <div className="navbar-anchorlinks">
-                        <Link to="/" activeclassname="active">Home</Link>
-                        <Link to="/#therapie">Therapien</Link>
-                        <Link to="/#unser-team">Unser Team</Link>
-                        <Link to="/#karriere">Karriere</Link>
-                        <Link to="/#news">News</Link>
+                        <ScrollLink to="/" activeclassname="active">Home</ScrollLink>
+                        <ScrollLink to="#therapie">Therapien</ScrollLink>
+                        <ScrollLink to="#unser-team">Unser Team</ScrollLink>
+                        <ScrollLink to="#karriere">Karriere</ScrollLink>
+                        <ScrollLink to="#news">News</ScrollLink>
                     </div>
                 </nav>
                 <h1 className="hero-headline">Heilen in diskreter und entspannter Atmosphäre</h1>
