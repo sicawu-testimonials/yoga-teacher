@@ -20,6 +20,13 @@ function Hero() {
                         <ScrollLink to="#karriere">Karriere</ScrollLink>
                         <ScrollLink to="#news">News</ScrollLink>
                     </div>
+                    <div className="burger-menu">
+                        <button className="burger-button">
+                            <span className="burger-bar"></span>
+                            <span className="burger-bar"></span>
+                            <span className="burger-bar"></span>
+                        </button>
+                    </div>
                 </nav>
                 <h1 className="hero-headline">Heilen in diskreter und entspannter Atmosphäre</h1>
             </div>

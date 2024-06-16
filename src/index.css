@@ -3,6 +3,9 @@
   src: url('../fonts/Brandon-Grotesque-regular.otf') format('opentype');
 }
 
+
+/* GENERAL & HEADLINES */
+
 :root {
   font-family: 'Brandon Grotesque', 'Avenir', sans-serif;
   font-style: normal;
@@ -14,8 +17,6 @@
 body {
   margin: 0;
 }
-
-/* HEADLINES */
 
 h1 {
   min-height: 160px;
@@ -46,25 +47,71 @@ p {
   letter-spacing: 0.01em;
 }
 
+.termin-sticky-button {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  color: #ffffff;
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 400;
+  background-color: #95C11F;
+  position: fixed;
+  z-index: 1;
+  bottom: 60px;
+  right: 80px;
+  border: 1px solid #95C11F;
+  padding: 16px 32px;
+  border-radius: 88.5px;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 50px;
+    padding-left: 30px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  p {
+    padding-bottom: 100px;
+  }
+}
+
 /* HERO */
 .logo {
-  width: 273px;
+  max-width: 273px;
   height: 112px;
   padding-top: 24px;
   padding-left: 80px;
-  gap: 0px;
-  opacity: 0px;
 }
 
 .hero {
   background-image: url('../img/hero.png');
-  width: 100vw;
+  width: 100%;
   height: 100vh;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
+@media (max-width: 767px) {
+  .logo {
+    max-width: 150px;
+    height: auto;
+    padding-left: 30px;
+  }
+
+  .hero {
+    background-position: center;
+  }
+}
+
+/* NAVBAR & BURGER MENU */
 .navbar {
   display: flex;
   flex-direction: row;
@@ -94,39 +141,89 @@ p {
   text-align: center;
 }
 
-.navbar-anchorlinks a.active {
-  text-decoration: underline;
-  text-decoration-color: #95C11F;
+.burger-menu {
+  display: none;
 }
 
-.termin-sticky-button {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  color: #ffffff;
-  font-size: 22px;
-  line-height: 32px;
-  font-weight: 400;
-  background-color: #95C11F;
-  position: fixed;
-  z-index: 1;
-  bottom: 60px;
-  right: 80px;
-  border: 1px solid #95C11F;
-  padding: 16px 32px;
-  border-radius: 88.5px;
-  cursor: pointer;
+@media (max-width: 767px) {
+  .navbar-anchorlinks {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  .burger-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 30px;
+    z-index: 1000;
+  }
+
+  .burger-bar {
+    background-color: #fff;
+    display: block;
+    height: 6px;
+    width: 50px;
+    border-radius: 20px;
+    margin: 10px auto;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .burger-button:focus {
+    outline: none;
+  }
+
+  .burger-button:hover .burger-bar {
+    opacity: 0.7;
+  }
+
+  .navbar-active {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    transform: translateY(-10px);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbar-active a {
+    color: #333;
+    padding: 10px;
+    display: block;
+    text-align: center;
+  }
+
+  .navbar-active a:hover {
+    background-color: #f2f2f2;
+  }
 }
 
 
 #therapie,
 #unser-team,
 #karriere,
-#news {
+#news,
+#footer {
   text-align: center;
-  padding: 100px 200px ;
   padding: 100px 200px 30px 200px;
 }
+
+@media (max-width: 767px) {
+
+  #therapie,
+  #unser-team,
+  #karriere,
+  #news {
+    padding: 70px 20px 30px 20px;
+  }
+}
+
 
 /* THERAPIEN */
 .therapie-motivation {
@@ -149,6 +246,17 @@ p {
   /* 450 not valid */
   line-height: 80px;
   letter-spacing: 0.2rem;
+}
+
+@media (max-width: 767px) {
+  .therapie-motivation {
+    background-position: bottom;
+  }
+
+  .therapie-motivation h2 {
+    font-size: 50px;
+    padding-left: 30px;
+  }
 }
 
 /* DAS TEAM */
@@ -193,6 +301,16 @@ p {
   transform: scale(0.9);
 }
 
+@media (max-width: 767px) {
+  .unser-team-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .down {
+    transform: translateY(0px);
+  }
+}
+
 /* KARRIERE*/
 .karriere-container {
   display: flex;
@@ -204,7 +322,6 @@ p {
   max-width: 326px;
   height: auto;
   border-radius: 24px 0px 0px 0px;
-  opacity: 0px;
 }
 
 .karriere-container-right {
@@ -219,7 +336,6 @@ p {
 .karriere-container-right h2 {
   width: 519px;
   height: 64px;
-  opacity: 0px;
   font-size: 48px;
   font-weight: 420;
   line-height: 64px;
@@ -302,6 +418,37 @@ p {
   border-radius: 88.5px;
   cursor: pointer;
 }
+
+@media (max-width: 767px) {
+  .karriere-container {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 80px;
+  }
+
+  .karriere-container-right {
+    padding-left: 10px;
+    text-align: center;
+  }
+
+  .karriere-container-right h2 {
+    width: auto;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+    padding: 33px 0px;
+  }
+
+  .karriere-buttons {
+    align-items: center;
+  }
+
+  .karriere-container-right p {
+    padding: 50px 0;
+  }
+}
+
 
 @media (prefers-color-scheme: light) {
   :root {
