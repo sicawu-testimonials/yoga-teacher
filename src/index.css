@@ -1,7 +1,6 @@
 @font-face {
   font-family: 'Brandon Grotesque';
   src: url('../fonts/Brandon-Grotesque-regular.otf') format('opentype');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+0178, U+0181, U+0192-0194, U+0227, U+0233, U+0259, U+02C6, U+02DA, U+02DC, U+200B-200D, U+2020, U+2026, U+2030, U+2039, U+2044, U+20AC, U+2122, U+2191, U+221A, U+221E, U+222B, U+2248, U+2260, U+2264, U+2265, U+25CA, U+25CB;
 }
 
 :root {
@@ -163,14 +162,14 @@ p {
 .unser-team-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  row-gap: 10px;
-  max-width: 80vw;
+  max-width: 100vw;
+  place-items: center;
 }
 
 .unser-team-container img {
-  width: 480px;
+  max-width: 480px;
   height: 360px;
-  object-fit: scale-down;
+  object-fit: contain;
 }
 
 .unser-team-container p {
