@@ -14,7 +14,7 @@ function UnserTeam() {
             <div id="unser-team">
                 <h2>Das Team</h2>
                 <h2 className="unser-team-subheadline">Mit Herz und Seele dabei</h2>
-                <p>Entdecke das Herz unserer Praxis! Hinter jeder erfolgreichen Mission und Behandlung stehen unsere Teammitglieder, die mit Leidenschaft und Fachwissen jeden Tag Herausforderungen meistern. Lernen Sie sie kennen und erfahren Sie, auf welche Behandlungen sie spezialisiert sind.</p>
+                <p>Entdecke das Herz unserer Praxis! Hinter jeder erfolgreichen Mission und Behandlung stehen unsere Teammitglieder, die mit Leidenschaft und Fachwissen jeden Tag Herausforderungen meistern. Lernen Sie sie kennen und erfahren Sie, auf welche Behandlungen sie spezialisiert sind.</p>
             </div>
             <div className="unser-team-container"> 
                 <div>

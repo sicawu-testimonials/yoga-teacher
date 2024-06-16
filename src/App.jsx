@@ -16,12 +16,12 @@ function App() {
 
   return (
     <>
-      <Hero />
+      <Hero id="home" />
       <Terminvereinbarung />
-      <Therapien />
-      <UnserTeam />
-      <Karriere />
-      <News />
+      <Therapien id="therapie" />
+      <UnserTeam id="unser-team" />
+      <Karriere id="karriere" />
+      <News id="news" />
       <Footer />
     </>
   )

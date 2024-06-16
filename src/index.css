@@ -8,21 +8,18 @@
   font-style: normal;
   font-weight: 100;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow-x: hidden;
 }
 
 /* HEADLINES */
 
 h1 {
-  height: 160px;
+  min-height: 160px;
+  max-width: 1000px;
   padding-left: 80px;
   font-size: 80px;
   color: #ffffff;
@@ -36,7 +33,7 @@ h2 {
   color: #95C11F;
   font-size: 64px;
   line-height: 64px;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 p {
@@ -46,8 +43,8 @@ p {
   line-height: 32px;
   font-weight: 400;
   align-items: center;
+  letter-spacing: 0.01em;
 }
-
 
 /* HERO */
 .logo {
@@ -101,7 +98,7 @@ p {
   text-decoration: underline;
   text-decoration-color: #95C11F;
 }
- 
+
 .termin-sticky-button {
   display: flex;
   flex-direction: row;
@@ -113,21 +110,25 @@ p {
   background-color: #95C11F;
   position: fixed;
   z-index: 1;
-  bottom: 80px;
+  bottom: 60px;
   right: 80px;
   border: 1px solid #95C11F;
   padding: 16px 32px;
-  border-radius: 88px;
+  border-radius: 88.5px;
+  cursor: pointer;
 }
 
+
+#therapie,
+#unser-team,
+#karriere,
+#news {
+  text-align: center;
+  padding: 100px 200px ;
+  padding: 100px 200px 30px 200px;
+}
 
 /* THERAPIEN */
-#therapie,
-#unser-team {
-  text-align: center;
-  padding: 100px 200px;
-}
-
 .therapie-motivation {
   background-image: url('../img/fitness-equipment.png');
   background-position: center;
@@ -147,49 +148,125 @@ p {
   font-weight: bold;
   /* 450 not valid */
   line-height: 80px;
+  letter-spacing: 0.2rem;
 }
 
 /* DAS TEAM */
-
 .unser-team-subheadline {
   font-size: 32px;
   font-weight: 390;
   line-height: 32px;
-  text-align: center;
   color: #000000;
 }
 
 .unser-team-container {
   display: grid;
-grid-template-columns: repeat(3, 1fr);
-max-width: 100vw;
-margin: 0 auto; 
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 10px;
+  max-width: 80vw;
 }
 
 .unser-team-container img {
-width: 480px;
-height: 360px;
-object-fit:scale-down;
+  width: 480px;
+  height: 360px;
+  object-fit: scale-down;
 }
 
 .unser-team-container p {
-text-align: center;
+  text-align: center;
+}
+
+.unser-team-container-name {
+  font-weight: bold;
 }
 
 .down {
-transform: translateY(40px);
+  transform: translateY(40px);
 }
 
 /* DAS TEAM - HOVER*/
-
-.unser-team-container > * { 
-transition: transform 0.4s;
+.unser-team-container>* {
+  transition: transform 0.4s;
 }
 
-.unser-team-container > *:hover {
-transform: scale(0.9);
-} 
+.unser-team-container>*:hover {
+  transform: scale(0.9);
+}
 
+/* KARRIERE*/
+.karriere-container {
+  display: flex;
+  flex-direction: row;
+  padding: 0 240px;
+}
+
+.karriere-container img {
+  max-width: 326px;
+  height: auto;
+  border-radius: 24px 0px 0px 0px;
+  opacity: 0px;
+}
+
+.karriere-container-right {
+  padding-left: 60px;
+  text-align: left;
+}
+
+.karriere-container-right p {
+  max-width: 480px;
+}
+
+.karriere-container-right h2 {
+  width: 519px;
+  height: 64px;
+  opacity: 0px;
+  font-size: 48px;
+  font-weight: 420;
+  line-height: 64px;
+  text-align: left;
+}
+
+.karriere-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.karriere-container-right button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+    width: fit-content;
+  white-space: nowrap;
+  padding: 7px 16px;
+  gap: 24px;
+  border-radius: 150px;
+  border: 1px;
+  border: 1px solid #0000001A
+}
+
+.karriere-container-right button img {
+  border: 1px solid #0000001A;
+  border-radius: 50%;
+  height: 24px;
+  padding: 5px
+}
+
+.karriere-container-right button:hover {
+  background-color: #95C11F;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.karriere-container-right button:hover img {
+  background-color: #ffffff;
+
+}
 
 @media (prefers-color-scheme: light) {
   :root {
