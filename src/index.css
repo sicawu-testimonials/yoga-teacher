@@ -147,6 +147,7 @@ p {
   display: none;
 }
 
+
 @media (max-width: 767px) {
   .navbar-anchorlinks {
     display: none;
@@ -180,6 +181,57 @@ p {
 
   .burger-button:hover .burger-bar {
     opacity: 0.7;
+  }
+
+  .burger-menu-geklickt {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .burger-menu-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    background-color: #fff;
+    text-align: center;
+    padding: 40px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .burger-menu-content a {
+    text-decoration: none;
+    color: inherit;
+    color: black;
+  }
+
+  .burger-menu-schliessen {
+    gap: 10px;
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 32px;
+    font-weight: 400;
+    background-color: #95C11F;
+    border: 1px solid #95C11F;
+    padding: 5px 32px;
+    border-radius: 88.5px;
+    cursor: pointer;
   }
 
   .navbar-active {
@@ -216,6 +268,7 @@ p {
 }
 
 @media (max-width: 767px) {
+
   #therapie,
   #unser-team,
   #karriere,
@@ -328,16 +381,16 @@ p {
   height: auto;
 }
 
-.karriere-container-right {
+.karriere-container-rechts {
   padding-left: 60px;
   text-align: left;
 }
 
-.karriere-container-right p {
+.karriere-container-rechts p {
   max-width: 480px;
 }
 
-.karriere-container-right h2 {
+.karriere-container-rechts h2 {
   width: 519px;
   height: 64px;
   font-size: 48px;
@@ -356,7 +409,7 @@ p {
   text-decoration: none;
 }
 
-.karriere-container-right button {
+.karriere-container-rechts button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -370,7 +423,7 @@ p {
   border: 1px solid #0000001A
 }
 
-.karriere-container-right button img {
+.karriere-container-rechts button img {
   border: 1px solid #0000001A;
   border-radius: 50%;
   width: auto;
@@ -378,13 +431,13 @@ p {
   padding: 5px
 }
 
-.karriere-container-right button:hover {
+.karriere-container-rechts button:hover {
   background-color: #95C11F;
   color: #ffffff;
   cursor: pointer;
 }
 
-.karriere-container-right button:hover img {
+.karriere-container-rechts button:hover img {
   background-color: #ffffff;
 
 }
@@ -401,12 +454,12 @@ p {
     margin: 0 auto;
   }
 
-  .karriere-container-right {
+  .karriere-container-rechts {
     padding-left: 5px;
     text-align: center;
   }
 
-  .karriere-container-right h2 {
+  .karriere-container-rechts h2 {
     width: auto;
     font-size: 40px;
     line-height: 50px;
@@ -421,7 +474,7 @@ p {
 
   .karriere-container-right p {
     padding-bottom: 50px;
-    margin-top: 13px;
+    padding-top: 13px;
   }
 }
 
@@ -471,5 +524,4 @@ p {
   a:hover {
     color: #95C11F;
   }
-
 }

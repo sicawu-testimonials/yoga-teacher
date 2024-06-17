@@ -13,7 +13,7 @@ function Karriere() {
                 <div>
                     <img src={Physiotherapeut} alt="Jobs Physiotherapeut prüft Patientins Schulter" />
                 </div>
-                <div className="karriere-container-right">
+                <div className="karriere-container-rechts">
                     <h2>Karriere auf dem Petrisberg</h2>
                     <p>Wir bieten das komplette Spektrum aller bewährten Behandlungsmethoden an und richten uns nach dem aktuellen Stand der medizinischen Erkenntnisse in der Rehabilitation und der Sporttherapie.</p>
                     <div className="karriere-buttons">
