@@ -19,9 +19,9 @@ function Terminvereinbarung() {
             {showPopup && (
                 <div className="popup">
                     <div className="popup-content">
-                    <h2>Terminvereinbarung</h2>
+                    <h2>Jetzt Termin vereinbaren</h2>
                     <p>Hier gibt's noch nischts zu sehen, keine Input fields nix nada.</p>
-                    <button onClick={handlePopupClose}>Popup schließen</button>
+                    <button onClick={handlePopupClose}>Bis dahin: Popup schließen</button>
                 </div>
                 </div>
             )}

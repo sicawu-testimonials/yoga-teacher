@@ -19,31 +19,27 @@ body {
 }
 
 h1 {
+  color: #ffffff;
+  font-size: 80px;
   min-height: 160px;
   max-width: 1000px;
-  padding-left: 80px;
-  font-size: 80px;
-  color: #ffffff;
-  font-weight: bold;
-  /* 450 not valid */
-  line-height: 80px;
+  padding-left: 80px; 
+  font-weight: 600;
+  line-height: 1em;
 }
 
 h2 {
-  font-size: 50px;
-  color: #95C11F;
   font-size: 64px;
+  color: #95C11F;
   line-height: 64px;
   font-weight: bold;
 }
 
 p {
-  color: #000000;
-  opacity: 65%;
   font-size: 20px;
+  color: rgba(0, 0, 0, 0.65);
   line-height: 32px;
   font-weight: 400;
-  align-items: center;
   letter-spacing: 0.01em;
 }
 
@@ -58,7 +54,7 @@ p {
   background-color: #95C11F;
   position: fixed;
   z-index: 1;
-  bottom: 7%;
+  bottom: 10%;
   right: 5%;
   border: 1px solid #95C11F;
   padding: 16px 32px;
@@ -66,11 +62,11 @@ p {
   cursor: pointer;
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   h1 {
     font-size: 50px;
     line-height: 60px;
-    padding-left: 30px;
+    padding-left: 5%;
   }
 
   h2 {
@@ -79,7 +75,7 @@ p {
   }
 
   p {
-    padding-bottom: 100px;
+    padding-bottom: 50px;
   }
 }
 
@@ -101,7 +97,7 @@ p {
   justify-content: space-between;
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .logo {
     width: 160px;
     height: auto;
@@ -143,12 +139,18 @@ p {
   text-align: center;
 }
 
+.navbar-anchorlinks a:hover {
+  text-decoration: underline;
+  text-decoration-color:#95C11F;
+  text-underline-offset: 0.4em;
+}
+
 .burger-menu {
   display: none;
 }
 
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .navbar-anchorlinks {
     display: none;
   }
@@ -267,8 +269,7 @@ p {
   padding: 100px 200px 30px 200px;
 }
 
-@media (max-width: 767px) {
-
+@media screen and (max-width: 767px) {
   #therapie,
   #unser-team,
   #karriere,
@@ -277,13 +278,13 @@ p {
   }
 }
 
-
 /* THERAPIEN */
 .therapie-motivation {
   background-image: url('../img/fitness-equipment.png');
   background-position: center;
-  width: 100vw;
+  width: auto;
   height: 100vh;
+  opacity: 0.9;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -296,12 +297,11 @@ p {
   font-size: 80px;
   color: #ffffff;
   font-weight: bold;
-  /* 450 not valid */
   line-height: 80px;
   letter-spacing: 0.2rem;
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .therapie-motivation {
     background-position: bottom;
   }
@@ -354,7 +354,7 @@ p {
   transform: scale(0.9);
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .unser-team-container {
     grid-template-columns: repeat(1, 1fr);
     padding-bottom: 1px;
@@ -442,7 +442,7 @@ p {
 
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .karriere-container {
     flex-direction: column;
     justify-content: center;
@@ -465,16 +465,11 @@ p {
     line-height: 50px;
     text-align: center;
     font-weight: bold;
-    padding-top: 33px;
+    padding: 33px 0;
   }
 
   .karriere-buttons {
     align-items: center;
-  }
-
-  .karriere-container-right p {
-    padding-bottom: 50px;
-    padding-top: 13px;
   }
 }
 
@@ -513,15 +508,4 @@ p {
   padding: 5px 32px;
   border-radius: 88.5px;
   cursor: pointer;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-
-  a:hover {
-    color: #95C11F;
-  }
 }

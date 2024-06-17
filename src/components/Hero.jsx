@@ -17,13 +17,13 @@ function Hero() {
         <>
             <div className="hero">
                 <nav className="navbar">
-                    <div>
+                    <div id="home">
                         <Link to="/">
                             <img src={logo} className="logo" />
                         </Link>
                     </div>
                     <div className="navbar-anchorlinks">
-                        <ScrollLink to="/" activeclassname="active">Home</ScrollLink>
+                        <ScrollLink to="" activeclassname="active">Home</ScrollLink>
                         <ScrollLink to="#therapie">Therapien</ScrollLink>
                         <ScrollLink to="#unser-team">Unser Team</ScrollLink>
                         <ScrollLink to="#karriere">Karriere</ScrollLink>
@@ -38,7 +38,7 @@ function Hero() {
                         {isMenuOpen && (
                             <div className="burger-menu-geklickt">
                                 <div className="burger-menu-content">
-                                    <ScrollLink to="/">Home</ScrollLink>
+                                    <ScrollLink to="#home">Home</ScrollLink>
                                     <ScrollLink to="#therapie">Therapien</ScrollLink>
                                     <ScrollLink to="#unser-team">Unser Team</ScrollLink>
                                     <ScrollLink to="#karriere">Karriere</ScrollLink>
