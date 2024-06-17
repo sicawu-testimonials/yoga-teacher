@@ -58,8 +58,8 @@ p {
   background-color: #95C11F;
   position: fixed;
   z-index: 1;
-  bottom: 60px;
-  right: 80px;
+  bottom: 7%;
+  right: 5%;
   border: 1px solid #95C11F;
   padding: 16px 32px;
   border-radius: 88.5px;
@@ -69,11 +69,13 @@ p {
 @media (max-width: 767px) {
   h1 {
     font-size: 50px;
+    line-height: 60px;
     padding-left: 30px;
   }
 
   h2 {
     font-size: 40px;
+    line-height: 40px;
   }
 
   p {
@@ -84,7 +86,7 @@ p {
 /* HERO */
 .logo {
   max-width: 273px;
-  height: 112px;
+  height: auto;
   padding-top: 24px;
   padding-left: 80px;
 }
@@ -101,7 +103,7 @@ p {
 
 @media (max-width: 767px) {
   .logo {
-    max-width: 150px;
+    width: 160px;
     height: auto;
     padding-left: 30px;
   }
@@ -204,7 +206,6 @@ p {
   }
 }
 
-
 #therapie,
 #unser-team,
 #karriere,
@@ -215,7 +216,6 @@ p {
 }
 
 @media (max-width: 767px) {
-
   #therapie,
   #unser-team,
   #karriere,
@@ -304,6 +304,11 @@ p {
 @media (max-width: 767px) {
   .unser-team-container {
     grid-template-columns: repeat(1, 1fr);
+    padding-bottom: 1px;
+  }
+
+  .unser-team-container p {
+    padding-bottom: 5px;
   }
 
   .down {
@@ -319,9 +324,8 @@ p {
 }
 
 .karriere-container img {
-  max-width: 326px;
+  width: 326px;
   height: auto;
-  border-radius: 24px 0px 0px 0px;
 }
 
 .karriere-container-right {
@@ -369,7 +373,8 @@ p {
 .karriere-container-right button img {
   border: 1px solid #0000001A;
   border-radius: 50%;
-  height: 24px;
+  width: auto;
+  height: auto;
   padding: 5px
 }
 
@@ -383,6 +388,44 @@ p {
   background-color: #ffffff;
 
 }
+
+@media (max-width: 767px) {
+  .karriere-container {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .karriere-container img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .karriere-container-right {
+    padding-left: 5px;
+    text-align: center;
+  }
+
+  .karriere-container-right h2 {
+    width: auto;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 33px;
+  }
+
+  .karriere-buttons {
+    align-items: center;
+  }
+
+  .karriere-container-right p {
+    padding-bottom: 50px;
+    margin-top: 13px;
+  }
+}
+
+/*POPUP TERMINVEREINBARUNG */
 
 .popup {
   position: fixed;
@@ -418,37 +461,6 @@ p {
   border-radius: 88.5px;
   cursor: pointer;
 }
-
-@media (max-width: 767px) {
-  .karriere-container {
-    flex-direction: column;
-    justify-content: center;
-    padding: 0px 80px;
-  }
-
-  .karriere-container-right {
-    padding-left: 10px;
-    text-align: center;
-  }
-
-  .karriere-container-right h2 {
-    width: auto;
-    font-size: 40px;
-    line-height: 50px;
-    text-align: center;
-    font-weight: bold;
-    padding: 33px 0px;
-  }
-
-  .karriere-buttons {
-    align-items: center;
-  }
-
-  .karriere-container-right p {
-    padding: 50px 0;
-  }
-}
-
 
 @media (prefers-color-scheme: light) {
   :root {

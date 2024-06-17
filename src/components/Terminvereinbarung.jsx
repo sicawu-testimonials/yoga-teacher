@@ -13,7 +13,7 @@ function Terminvereinbarung() {
     return (
         <>
             <button className="termin-sticky-button" onClick={handleButtonClick}>
-                Terminvereinbarung
+                Termin vereinbaren
                 <img src={Calendar} alt="Kalender Icon" />
             </button>
             {showPopup && (

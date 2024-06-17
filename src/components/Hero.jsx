@@ -8,9 +8,9 @@ function Hero() {
         <>
             <div className="hero">
                 <nav className="navbar">
-                    <div className="logo">
+                    <div>
                         <Link to="/">
-                            <img src={logo} />
+                            <img src={logo} className="logo"/>
                         </Link>
                     </div>
                     <div className="navbar-anchorlinks">
