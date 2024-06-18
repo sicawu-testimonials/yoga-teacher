@@ -5,7 +5,6 @@
 
 
 /* GENERAL & HEADLINES */
-
 :root {
   font-family: 'Brandon Grotesque', 'Avenir', sans-serif;
   font-style: normal;
@@ -149,7 +148,6 @@ p {
   display: none;
 }
 
-
 @media screen and (max-width: 767px) {
   .navbar-anchorlinks {
     display: none;
@@ -280,7 +278,9 @@ p {
 
 /* THERAPIEN */
 .therapie-motivation {
-  background-image: url('../img/fitness-equipment.png');
+  background: 
+  linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%),
+  url('../img/fitness-equipment.png');
   background-position: center;
   width: auto;
   height: 100vh;
@@ -315,7 +315,7 @@ p {
 /* DAS TEAM */
 .unser-team-subheadline {
   font-size: 32px;
-  font-weight: 390;
+  font-weight: 400;
   line-height: 32px;
   color: #000000;
 }
@@ -394,7 +394,7 @@ p {
   width: 519px;
   height: 64px;
   font-size: 48px;
-  font-weight: 420;
+  font-weight: 400;
   line-height: 64px;
   text-align: left;
 }
