@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import { useState } from "react"
-import logo from "../images/logo.png"
 import ScrollLink from './ScrollLink'
+import { PiFlowerLotus } from "react-icons/pi";
 
 
 function Hero() {
@@ -19,15 +19,14 @@ function Hero() {
                 <nav className="navbar">
                     <div id="home">
                         <Link to="/">
-                            <img src={logo} className="logo" />
+                        <PiFlowerLotus size={50} color='white' className="logo"/>
                         </Link>
                     </div>
                     <div className="navbar-anchorlinks">
-                        <ScrollLink to="" activeclassname="active">Home</ScrollLink>
-                        <ScrollLink to="#therapie">Therapien</ScrollLink>
-                        <ScrollLink to="#unser-team">Unser Team</ScrollLink>
-                        <ScrollLink to="#karriere">Karriere</ScrollLink>
                         <ScrollLink to="#news">News</ScrollLink>
+                        <ScrollLink to="#philosophy">Philosophy</ScrollLink>
+                        <ScrollLink to="#team">Team</ScrollLink>
+                        <ScrollLink to="#teacher-training">Teacher Training</ScrollLink>
                     </div>
                     <div className="burger-menu">
                         <button className="burger-button" onClick={handleMenuClick}>
@@ -39,10 +38,10 @@ function Hero() {
                             <div className="burger-menu-geklickt">
                                 <div className="burger-menu-content">
                                     <ScrollLink to="#home">Home</ScrollLink>
-                                    <ScrollLink to="#therapie">Therapien</ScrollLink>
-                                    <ScrollLink to="#unser-team">Unser Team</ScrollLink>
-                                    <ScrollLink to="#karriere">Karriere</ScrollLink>
                                     <ScrollLink to="#news">News</ScrollLink>
+                                    <ScrollLink to="#philosophy">Philosophy</ScrollLink>
+                                    <ScrollLink to="#team">Our Team</ScrollLink>
+                                    <ScrollLink to="#teacher-training">Teacher Trainings</ScrollLink>
                                     <button className="burger-menu-schliessen" 
                                     onClick={handleMenuClose}>X</button>
                                 </div>
@@ -50,7 +49,7 @@ function Hero() {
                         )}
                     </div>
                 </nav>
-                <h1 className="hero-headline">Heilen in diskreter und entspannter Atmosphäre</h1>
+                <h1 className="hero-headline">Unwind & Reconnect. Welcome to Yoga Shala.</h1>
             </div>
         </>
     )

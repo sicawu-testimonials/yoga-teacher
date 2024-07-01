@@ -1,12 +1,12 @@
 @font-face {
-  font-family: 'Brandon Grotesque';
-  src: url('../fonts/Brandon-Grotesque-regular.otf') format('opentype');
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-ExtraLight.ttf') format('opentype');
 }
 
 
 /* GENERAL & HEADLINES */
 :root {
-  font-family: 'Brandon Grotesque', 'Avenir', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 100;
   margin: 0 auto;
@@ -19,46 +19,57 @@ body {
 
 h1 {
   color: #ffffff;
-  font-size: 80px;
+  font-size: 70px;
   min-height: 160px;
   max-width: 1000px;
-  padding-left: 80px; 
+  padding-left: 80px;
   font-weight: 600;
   line-height: 1em;
 }
 
 h2 {
   font-size: 64px;
-  color: #95C11F;
+  color: #99b6ad;
   line-height: 64px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 30px;
+  color: #F5F5F5;
   font-weight: bold;
 }
 
 p {
   font-size: 20px;
-  color: rgba(0, 0, 0, 0.65);
+  color: #4a4a4a;
   line-height: 32px;
   font-weight: 400;
   letter-spacing: 0.01em;
 }
 
 .termin-sticky-button {
+  font-family: 'Montserrat';
+  font-weight: bold;
   display: flex;
   flex-direction: row;
   gap: 10px;
   color: #ffffff;
   font-size: 22px;
   line-height: 32px;
-  font-weight: 400;
-  background-color: #95C11F;
+  background-color: #CC5500;
   position: fixed;
   z-index: 1;
-  bottom: 10%;
-  right: 5%;
-  border: 1px solid #95C11F;
+  bottom: 4%;
+  right: 4%;
+  border: 1px solid #CC5500;
   padding: 16px 32px;
   border-radius: 88.5px;
   cursor: pointer;
+}
+
+.termin-sticky-button:hover {
+  background-color: #FF6F61;
 }
 
 @media screen and (max-width: 767px) {
@@ -80,14 +91,16 @@ p {
 
 /* HERO */
 .logo {
-  max-width: 273px;
-  height: auto;
+  color: #99b6ad;
+  max-width: 300px;
   padding-top: 24px;
   padding-left: 80px;
 }
 
 .hero {
-  background-image: url('../img/hero.png');
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%),
+    url('../img/Vinyasa-yoga-teacher-downward-facing-dog.jpg');
   width: 100%;
   height: 100vh;
   background-size: cover;
@@ -98,7 +111,7 @@ p {
 
 @media screen and (max-width: 767px) {
   .logo {
-    width: 160px;
+    width: 80px;
     height: auto;
     padding-left: 30px;
   }
@@ -140,7 +153,7 @@ p {
 
 .navbar-anchorlinks a:hover {
   text-decoration: underline;
-  text-decoration-color:#95C11F;
+  text-decoration-color: #99b6ad;
   text-underline-offset: 0.4em;
 }
 
@@ -227,11 +240,15 @@ p {
     font-size: 15px;
     line-height: 32px;
     font-weight: 400;
-    background-color: #95C11F;
-    border: 1px solid #95C11F;
+    background-color: #99b6ad;
+    border: 1px solid #99b6ad;
     padding: 5px 32px;
     border-radius: 88.5px;
     cursor: pointer;
+  }
+
+  .burger-menu-schliessen button {
+    padding: 5px 5px;
   }
 
   .navbar-active {
@@ -258,46 +275,59 @@ p {
   }
 }
 
-#therapie,
-#unser-team,
-#karriere,
-#news,
-#footer {
+#philosophy,
+#team,
+#teacher-training,
+#news {
   text-align: center;
-  padding: 100px 200px 30px 200px;
+  padding: 100px 200px 100px 200px;
 }
 
 @media screen and (max-width: 767px) {
-  #therapie,
-  #unser-team,
-  #karriere,
+
+  #philosophy,
+  #team,
+  #teacher-training,
   #news {
     padding: 70px 20px 30px 20px;
   }
 }
 
+#news p {
+  padding-bottom: 10px;
+}
+
+.news-icon {
+  color: #99b6ad;
+  text-decoration: none;
+}
+
 /* THERAPIEN */
+#philosophy {
+  background-color: #f5f5f5;
+}
+
 .therapie-motivation {
-  background: 
-  linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%),
-  url('../img/fitness-equipment.png');
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%),
+    url('../img/Vinyasa-yoga-child-pose.jpg');
+  background-size: cover;
   background-position: center;
   width: auto;
   height: 100vh;
   opacity: 0.9;
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
 .therapie-motivation h2 {
   width: 377px;
-  height: 240px;
   padding-left: 80px;
   font-size: 80px;
   color: #ffffff;
   font-weight: bold;
-  line-height: 80px;
   letter-spacing: 0.2rem;
 }
 
@@ -328,8 +358,9 @@ p {
 }
 
 .unser-team-container img {
-  max-width: 480px;
-  height: 360px;
+  width: 326px;
+  height: auto;
+  border-radius: 50px;
   object-fit: contain;
 }
 
@@ -371,14 +402,16 @@ p {
 
 /* KARRIERE*/
 .karriere-container {
+  background-color: #F5F5F5;
   display: flex;
   flex-direction: row;
-  padding: 0 240px;
+  padding: 100px 240px;
 }
 
 .karriere-container img {
   width: 326px;
   height: auto;
+  border-radius: 50px;
 }
 
 .karriere-container-rechts {
@@ -388,15 +421,16 @@ p {
 
 .karriere-container-rechts p {
   max-width: 480px;
+  text-align: left;
 }
 
 .karriere-container-rechts h2 {
-  width: 519px;
-  height: 64px;
+  width: auto;
   font-size: 48px;
   font-weight: 400;
   line-height: 64px;
   text-align: left;
+  margin-top: 0px;
 }
 
 .karriere-buttons {
@@ -410,17 +444,19 @@ p {
 }
 
 .karriere-container-rechts button {
+  font-family: "Montserrat";
+  font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
+  background-color: #99b6ad;
+  color: #ffffff;
   width: fit-content;
   white-space: nowrap;
-  padding: 7px 16px;
   gap: 24px;
-  border-radius: 150px;
-  border: 1px;
-  border: 1px solid #0000001A
+  padding: 16px 32px;
+  border-radius: 88.5px;
+  border: 1px solid #f1f1f1
 }
 
 .karriere-container-rechts button img {
@@ -432,8 +468,7 @@ p {
 }
 
 .karriere-container-rechts button:hover {
-  background-color: #95C11F;
-  color: #ffffff;
+  background-color: #FFCBA4;
   cursor: pointer;
 }
 
@@ -446,7 +481,8 @@ p {
   .karriere-container {
     flex-direction: column;
     justify-content: center;
-    padding: 0;
+    align-items: center;
+    padding: 100px 20px;
   }
 
   .karriere-container img {
@@ -456,8 +492,12 @@ p {
 
   .karriere-container-rechts {
     padding-left: 5px;
+  }
+
+  .karriere-container-rechts p {
     text-align: center;
   }
+
 
   .karriere-container-rechts h2 {
     width: auto;
@@ -471,6 +511,30 @@ p {
   .karriere-buttons {
     align-items: center;
   }
+}
+
+/* Footer */
+.footer {
+  background-color: #4A4A4A  ;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-text {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-icon {
+  color: white;
+  text-decoration: none;
 }
 
 /*POPUP TERMINVEREINBARUNG */
@@ -491,21 +555,41 @@ p {
 .popup-content {
   background-color: #fff;
   text-align: center;
-  padding: 40px;
+  padding: 20px;
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.popup button {
+.popup-button {
   gap: 10px;
-  color: #ffffff;
+  color: #99b6ad;
+  background-color: white;
   font-size: 15px;
   line-height: 32px;
   font-weight: 400;
-  background-color: #95C11F;
-  border: 1px solid #95C11F;
-  padding: 5px 32px;
+  border: 1px solid #99b6ad;
+  padding: 7px 12px;
   border-radius: 88.5px;
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.popup-button-mail {
+  background-color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.popup-icon {
+  color: #99b6ad;
+}
+
+.popup-button:hover {
+  background-color: #FF6F61;
 }
