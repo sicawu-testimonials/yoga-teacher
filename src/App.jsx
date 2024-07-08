@@ -2,6 +2,7 @@ import { Routes, Route, Link } from "react-router-dom"
 
 import Hero from "./components/Hero"
 import News from "./components/News"
+import GoogleMaps from "./components/GoogleMaps"
 import Philosophy from "./components/Philosophy"
 import UnserTeam from "./components/UnserTeam"
 import TeacherTraining from "./components/TeacherTraining"
@@ -16,6 +17,7 @@ function App() {
       <Terminvereinbarung />
       <Hero />
       <News />
+      <GoogleMaps />
       <Philosophy />
       <UnserTeam />
       <TeacherTraining />

@@ -372,10 +372,6 @@ p {
   font-weight: bold;
 }
 
-.down {
-  transform: translateY(40px);
-}
-
 /* DAS TEAM - HOVER*/
 .unser-team-container>* {
   transition: transform 0.4s;
@@ -400,7 +396,14 @@ p {
   }
 }
 
-/* KARRIERE*/
+/* TEACHER TRAINING*/
+#teacher-training {
+  background-color: #99b6ad;
+}
+#teacher-training h2 {
+color: #f5f5f5;
+} 
+
 .karriere-container {
   background-color: #F5F5F5;
   display: flex;

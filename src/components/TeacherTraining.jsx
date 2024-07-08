@@ -7,8 +7,6 @@ function Karriere() {
         <>
             <div id="teacher-training">
                 <h2>Start Your Yoga Teacher Journey Now.</h2>
-
-
             </div>
             <div className="karriere-container">
                 <div>
