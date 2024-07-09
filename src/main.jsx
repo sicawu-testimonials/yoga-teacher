@@ -14,15 +14,15 @@ import NotFound from "./components/NotFound"
 import './index.css'
 
 const loadGoogleMapsScript = () => {
-  const script = document.createElement('script');
-  script.src = `https://maps.googleapis.com/maps/api/js?key=${import.meta.env.VITE_GOOGLE_API_KEY}&libraries=places`;
-  script.async = true;
+  const script = document.createElement('script')
+  script.src = `https://maps.googleapis.com/maps/api/js?key=${import.meta.env.VITE_GOOGLE_API_KEY}&libraries=places`
+  script.async = true
   script.onload = () => {
     // Initialize your map here
-    console.log('Google Maps API script loaded');
-  };
-  document.head.appendChild(script);
-};
+    console.log('Google Maps API script loaded')
+  }
+  document.head.appendChild(script)
+}
 
 loadGoogleMapsScript()
 

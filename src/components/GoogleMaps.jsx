@@ -33,10 +33,10 @@ function GoogleMaps() {
     }, []) // Array -> einmaliges Ausführen
 
     return (
-        <>
+        <div id="location">
             <h2>Where to Find Us</h2>
             <div id="map" style={{ height: '100vh', width: '100%' }}></div>
-        </>
+        </div>
     )
 }
 

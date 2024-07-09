@@ -275,12 +275,17 @@ p {
   }
 }
 
+#news,
 #philosophy,
 #team,
-#teacher-training,
-#news {
+#teacher-training
+{
   text-align: center;
   padding: 100px 200px 100px 200px;
+}
+
+#location {
+text-align: center;
 }
 
 @media screen and (max-width: 767px) {

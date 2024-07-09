@@ -39,6 +39,7 @@ function Hero() {
                                 <div className="burger-menu-content">
                                     <ScrollLink to="#home">Home</ScrollLink>
                                     <ScrollLink to="#news">News</ScrollLink>
+                                    <ScrollLink to="#location">Location</ScrollLink>
                                     <ScrollLink to="#philosophy">Philosophy</ScrollLink>
                                     <ScrollLink to="#team">Our Team</ScrollLink>
                                     <ScrollLink to="#teacher-training">Teacher Trainings</ScrollLink>
