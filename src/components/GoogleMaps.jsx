@@ -33,9 +33,12 @@ function GoogleMaps() {
     }, []) // Array -> einmaliges Ausführen
 
     return (
-        <div id="map" style={{ height: '100vh', width: '100%' }}></div>
+        <>
+            <h2>Where to Find Us</h2>
+            <div id="map" style={{ height: '100vh', width: '100%' }}></div>
+        </>
     )
 }
-   
+
 
 export default GoogleMaps
