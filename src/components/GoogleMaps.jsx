@@ -8,29 +8,46 @@ function GoogleMaps() {
     async function initMap() {
         const position = { lat: 16.0519593, lng: 108.2492045 }
 
-        const { google } = window; // Zugriff auf das globale google-Objekt
+        if (window.google && window.google.maps) {
+            const { Map } = await google.maps.importLibrary("maps");
+            const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
-        const { Map } = await google.maps.importLibrary("maps");
-        const { AdvancedMarkerElement } = await google.maps.importLibrary("marker")
+            if (Map && AdvancedMarkerElement) {
+                map = new Map(document.getElementById("map"), {
+                    zoom: 14,
+                    center: position,
+                    mapId: googleMapsApiKey,
+                });
 
-        map = new Map(document.getElementById("map"), {
-            zoom: 14,
-            center: position,
-            mapId: googleMapsApiKey,
-        })
-
-        const marker = new AdvancedMarkerElement({
-            map: map,
-            position: position,
-            title: "Yellow flag at Danang beach",
-        })
+                const marker = new AdvancedMarkerElement({
+                    map: map,
+                    position: position,
+                    title: "Yellow flag at Danang beach",
+                });
+            } else {
+                console.error('Failed to import Google Maps libraries');
+            }
+        } else {
+            console.error('Google Maps API is not loaded');
+        }
     }
 
     useEffect(() => {
         if (googleMapsApiKey) {
-            initMap();
+            const script = document.createElement('script');
+            script.src = `https://maps.googleapis.com/maps/api/js?key=${googleMapsApiKey}&callback=initMap`;
+            script.async = true;
+            document.head.appendChild(script);
+
+            script.onload = () => {
+                initMap();
+            };
+
+            script.onerror = () => {
+                console.error('Error loading Google Maps script');
+            };
         }
-    }, []) // Array -> einmaliges Ausführen
+    }, []); // Array -> einmaliges Ausführen
 
     return (
         <div id="location">
